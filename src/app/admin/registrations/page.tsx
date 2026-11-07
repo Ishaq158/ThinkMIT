@@ -190,8 +190,15 @@ export default function RegistrationsAdminPage() {
     }
   };
 
+  // Export settings
+  const [exportFormat, setExportFormat] = useState<'team' | 'member'>('team');
+  const [exportInternal, setExportInternal] = useState(false);
+
   const handleExportCSV = (mode: 'all' | 'filtered' | 'selected') => {
     const params = new URLSearchParams();
+    params.set('format', exportFormat);
+    if (exportInternal) params.set('internal', '1');
+
     if (mode === 'selected' && selectedIds.length > 0) {
       params.set('ids', selectedIds.join(','));
     } else if (mode === 'filtered') {
