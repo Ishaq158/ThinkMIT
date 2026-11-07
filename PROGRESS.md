@@ -9,9 +9,9 @@
 | **2. Content System** | `getContent()`, Supabase server/browser clients, `site_content` merge | Done | `supabase-server.ts`, `supabase-browser.ts`, and `content.ts` with deep-fill hydration and tag caching; verified via unit tests |
 | **3. Landing Page** | Pixel-faithful sections, MotionProvider, Lenis, responsive QA | Done | All 8 sections rendered from content; MotionProvider and Lenis scroll integrated; verified at 320, 375, 768, 1024, 1280, 1440, 1920, 2560px with no horizontal scroll and stable hero height; screenshots captured |
 | **4. Database** | `supabase/schema.sql`, `scripts/check-db.ts` | Done | Exact SQL per PRD §10 in `supabase/schema.sql`; automated DB integrity verifier in `scripts/check-db.ts` |
-| **6. Checkpoint** | Supabase project creation, SQL run, verification (HUMAN STEP) | In Progress | Waiting for user configuration and "done" confirmation |
-| **5. Registration** | Zod schema, `/api/register`, 4-step stepper, validation, draft save | Pending | |
-| **7. Admin Area** | Auth login, `requireAdmin()`, dashboard, registrations table & detail | Pending | |
+| **6. Checkpoint** | Supabase project creation, SQL run, verification (HUMAN STEP) | Done | Tables, RLS, functions verified in Supabase; ADMIN_EMAILS configured |
+| **5. Registration** | Zod schema, `/api/register`, 4-step stepper, validation, draft save | Done | 4-step stepper with stream auto-swap, PPT pitch deck submission field, idempotency, honeypot, rate limiting, and all 8 acceptance tests PASSED |
+| **7. Admin Area** | Auth login, `requireAdmin()`, dashboard, registrations table & detail | In Progress | Implementing admin login, middleware, stats, registrations management |
 | **8. CSV Export** | RFC-4180 CSV, BOM, formula-injection guard, team & member formats | Pending | |
 | **9. Content Editor** | Recursive schema editor, overrides, instant revalidation | Pending | |
 | **10. Promo & Media** | Direct storage upload, video player, settings, announcement API | Pending | |

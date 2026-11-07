@@ -208,3 +208,4 @@ export default function AboutBento({
     </section>
   );
 }
+

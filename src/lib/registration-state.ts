@@ -55,3 +55,4 @@ export function getRegistrationState(registration: SiteContent['registration']) 
     deadlineLabel,
   };
 }
+

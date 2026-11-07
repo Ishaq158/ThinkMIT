@@ -44,3 +44,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - **In Development**: Editing `data.js` immediately updates the website on save.
 - **In Production**: Any changes to `data.js` take effect upon next git push and Vercel redeploy.
 - **Admin Panel Overrides**: Organizers can edit content directly in `/admin/content`. Changes are saved to the Supabase database (`site_content`) and take effect immediately without redeploying. "Reset to default" deletes the override and falls back to `data.js`.
+

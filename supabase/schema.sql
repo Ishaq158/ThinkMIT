@@ -95,3 +95,4 @@ revoke all on function public.register_team(jsonb,text,text) from public, anon, 
 -- Storage bucket for uploads (public read)
 insert into storage.buckets (id, name, public) values ('media','media',true)
 on conflict (id) do nothing;
+

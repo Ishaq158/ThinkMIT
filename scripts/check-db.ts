@@ -25,7 +25,10 @@ function loadEnv() {
 loadEnv();
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const serviceKey =
+  process.env.SUPABASE_SERVICE_ROLE_KEY ||
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 
 async function checkDatabase() {
   console.log('--- SUPABASE DATABASE & STORAGE INTEGRITY CHECK ---');
@@ -132,3 +135,4 @@ checkDatabase().catch((err) => {
   console.error('Unexpected check failure:', err);
   process.exit(1);
 });
+
