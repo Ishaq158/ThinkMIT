@@ -6,8 +6,8 @@
 |---|---|---|---|
 | **0. Plan** | Align on architecture, folder structure, guidelines, ambiguities | Done | Implementation plan created and approved |
 | **1. Scaffold** | Next.js 14, TS, `@data` alias, `.env.example`, `design.css`, `layout.tsx` | Done | Dependencies installed, project compiled, dev/build working without errors |
-| **2. Content System** | `getContent()`, Supabase server/browser clients, `site_content` merge | In Progress | Implementing `content.ts` with deep-fill and fallback |
-| **3. Landing Page** | Pixel-faithful sections, MotionProvider, Lenis, responsive QA | Pending | |
+| **2. Content System** | `getContent()`, Supabase server/browser clients, `site_content` merge | Done | `supabase-server.ts`, `supabase-browser.ts`, and `content.ts` with deep-fill hydration and tag caching; verified via unit tests |
+| **3. Landing Page** | Pixel-faithful sections, MotionProvider, Lenis, responsive QA | In Progress | Building components pixel-faithful to Design.md and PRD |
 | **4. Database** | `supabase/schema.sql`, `scripts/check-db.ts` | Pending | |
 | **6. Checkpoint** | Supabase project creation, SQL run, verification (HUMAN STEP) | Pending | |
 | **5. Registration** | Zod schema, `/api/register`, 4-step stepper, validation, draft save | Pending | |
