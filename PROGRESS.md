@@ -11,8 +11,8 @@
 | **4. Database** | `supabase/schema.sql`, `scripts/check-db.ts` | Done | Exact SQL per PRD §10 in `supabase/schema.sql`; automated DB integrity verifier in `scripts/check-db.ts` |
 | **6. Checkpoint** | Supabase project creation, SQL run, verification (HUMAN STEP) | Done | Tables, RLS, functions verified in Supabase; ADMIN_EMAILS configured |
 | **5. Registration** | Zod schema, `/api/register`, 4-step stepper, validation, draft save | Done | 4-step stepper with stream auto-swap, PPT pitch deck submission field, idempotency, honeypot, rate limiting, and all 8 acceptance tests PASSED |
-| **7. Admin Area** | Auth login, `requireAdmin()`, dashboard, registrations table & detail | In Progress | Implementing admin login, middleware, stats, registrations management |
-| **8. CSV Export** | RFC-4180 CSV, BOM, formula-injection guard, team & member formats | Pending | |
+| **7. Admin Area** | Auth login, `requireAdmin()`, dashboard, registrations table & detail | Done | Complete admin shell, auth guard, stats route, registrations table with search/filter/sort, single-team detail/evaluation/notes, bulk actions, and verified 401/403 protections |
+| **8. CSV Export** | RFC-4180 CSV, BOM, formula-injection guard, team & member formats | In Progress | Implementing CSV generation with UTF-8 BOM, sanitization, and export route |
 | **9. Content Editor** | Recursive schema editor, overrides, instant revalidation | Pending | |
 | **10. Promo & Media** | Direct storage upload, video player, settings, announcement API | Pending | |
 | **11. Polish & QA** | Security headers, CSP, A11y, SEO, full PRD & Design check matrix | Pending | |
@@ -20,9 +20,16 @@
 
 ## Done
 - Milestone 0: Architectural plan and requirements alignment.
+- Milestone 1: Scaffold Next.js project with styling, fonts, aliases, environment templates.
+- Milestone 2: Dynamic content system with database overrides and deep-fill defaults.
+- Milestone 3: Landing page with all 8 sections, animations, Lenis scroll, and responsive QA.
+- Milestone 4: Database schema and integrity verifiers.
+- Milestone 6: Supabase production integration, tables, and RPC function.
+- Milestone 5: Full 4-step registration system with PPT deck submission and validation tests.
+- Milestone 7: Admin portal with authentication guard, dashboard stats, registrations table, detail editor, bulk operations, and verified access control.
 
 ## Next
-- Complete Milestone 1: Finish dependency installation, verify dev server and build, git commit.
+- Milestone 8: CSV Export with RFC-4180 compliance, formula injection prevention, and format selection.
 
 ## Known Issues / Blockers
 - None currently.
